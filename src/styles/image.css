@@ -1,0 +1,9 @@
+.img:hover{
+    opacity: 0.8;
+}
+@media only screen and (max-width: 3000px) and (min-width: 650px) {
+    .stuff{
+        display: none;
+        background-color: aqua;
+    }
+}

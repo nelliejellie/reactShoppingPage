@@ -1,0 +1,13 @@
+.ul{
+    width:40vw;
+}
+nav{
+    border-bottom-width: thin;
+}
+
+@media (max-width: 435px) {
+    nav{
+        border: none;
+        width: 85vw;
+    }
+}
