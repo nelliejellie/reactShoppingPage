@@ -12,26 +12,26 @@ const Image = () => {
     let mainImageDisplay = useRef(null); 
     const [imageCount, setImageCount] = useState(0)
     const imagesArray = [mainImage,imagetwo,imagethree,imagefour];
-   const GetNextBackwardsImage = () =>{
-       console.log("going back....")
-       imageCount < 1 ? setImageCount(3) : setImageCount(imageCount - 1)
-   } 
-   const GetNextForwardsImage = () =>{
-    console.log("going forward....")
-    imageCount <= 2 ? setImageCount(imageCount + 1):setImageCount(0)
-   }
-   const ChangeMainImage = () =>{
-       console.log(mainImageDisplay)
-   }
-  return (
-    <div className='mt-16'>
+    const GetNextBackwardsImage = () =>{
+        console.log("going back....")
+        imageCount < 1 ? setImageCount(3) : setImageCount(imageCount - 1)
+    } 
+    const GetNextForwardsImage = () =>{
+        console.log("going forward....")
+        imageCount <= 2 ? setImageCount(imageCount + 1):setImageCount(0)
+    }
+    const ChangeMainImage = () =>{
+        console.log(mainImageDisplay)
+    }
+    return (
+    <div className='mt-4'>
         <img
          src={imagesArray[imageCount]}
-         className='w-2/5 h-2/5 rounded-md sm:absolute top-16 sm:w-4/5 sm:ml-2' 
+         className='w-4/5 h-2/5 rounded-md sm:absolute top-16 sm:w-4/5 sm:ml-2' 
          ref={mainImageDisplay}
          onClick={ChangeMainImage}
          />
-        <div className='flex justify-between w-2/5 mt-4 sm:hidden'>
+        <div className='flex justify-between w-4/5 mt-4 sm:hidden'>
             <img src={imageone} alt="" className='w-1/6 rounded-md img' onClick={()=>{setImageCount(0)}} />
             <img src={imagetwo} alt="" className='w-1/6 rounded-md img' onClick={()=>{setImageCount(1)}}/>
             <img src={imagethree} alt="" className='w-1/6 rounded-md img' onClick={()=>{setImageCount(2)}}/>
