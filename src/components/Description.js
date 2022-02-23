@@ -1,5 +1,6 @@
 import React from 'react'
 import "../styles/description.css"
+import Button from './Button'
 
 const Description = () => {
   return (
@@ -17,6 +18,7 @@ const Description = () => {
             <p className='text-orange-600 mt-2 text-sm'>50%</p>
         </div>
         <strike className='mt-2 text-stone-300 sm:relative sm:bottom-6 sm:left-52'>&#36; 250.00</strike>
+        <Button/>
     </div>
   )
 }

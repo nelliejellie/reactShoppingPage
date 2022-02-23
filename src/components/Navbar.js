@@ -1,14 +1,14 @@
 import React from 'react'
 import { useState } from 'react';
-import { FaShoppingCart } from 'react-icons/fa'
-import { BiMenu } from 'react-icons/bi'
+import { FaShoppingCart } from 'react-icons/fa';
+import { BiMenu } from 'react-icons/bi';
 import Cart from './Cart';
 import avatar from "../images/image-avatar.png"
 import "../styles/navbar.css"
 
 
 const Navbar = () => {
-  const [showCart, setShowCart] = useState(true);
+  const [showCart, setShowCart] = useState(false);
 
   const toggleCart = () =>{
       setShowCart(!showCart)
