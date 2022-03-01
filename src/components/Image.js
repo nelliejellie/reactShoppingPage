@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useRef } from 'react'
+import { useState, useRef, useContext} from 'react'
 import mainImage from '../images/mainImage.jpg'
 import imageone from '../images/image1thumbnail.jpg'
 import imagetwo from '../images/image2thumbnail.jpg'
@@ -7,8 +7,11 @@ import imagethree from '../images/image3thumbnail.jpg'
 import imagefour from '../images/image4thumbnail.jpg'
 import { FiArrowLeftCircle, FiArrowRightCircle} from 'react-icons/fi'
 import "../styles/image.css"
+import { DataContext } from '../context/DataContext'
 
 const Image = () => {
+    const {data, setData} = useContext(DataContext);
+    
     let mainImageDisplay = useRef(null); 
     const [imageCount, setImageCount] = useState(0)
     const imagesArray = [mainImage,imagetwo,imagethree,imagefour];
